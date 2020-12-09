@@ -4,6 +4,7 @@
     </IfModule>
 
     RewriteEngine On
+    RewriteBase /
     DirectoryIndex index.php # This line does the trick
 
     # Redirect Trailing Slashes If Not A Folder...
@@ -13,19 +14,20 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteRule . /index.php [L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    
-    <Directory /var/www/gloops/public>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-    </Directory>
+
+   
 </IfModule>
 <IfModule dir_module>
     DirectoryIndex index.html index.php
 </IfModule>
+<Directory /var/www/gloops/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
