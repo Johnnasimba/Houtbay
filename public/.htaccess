@@ -18,12 +18,14 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    
+    <Directory /var/www/gloops/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
 </IfModule>
 <IfModule dir_module>
     DirectoryIndex index.html index.php
 </IfModule>
-<Directory /var/www/gloops/public>
-        Options Indexes FollowSymLinks
-        AllowOverride All
-        Require all granted
-</Directory>
