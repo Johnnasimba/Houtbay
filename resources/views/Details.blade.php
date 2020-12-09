@@ -53,7 +53,7 @@
 
             <h6 class="left"><strong> EXPERIENCE</strong></h6><br>
             <P>{{ $item->experience }}</P>
-            <h6 class="left"><strong>RENFERENCE</strong></h6><br>
+            <h6 class="left"><strong>REFERENCE</strong></h6><br>
             <P>{{ $item->reference }}</P>
              <p>contact information reserved. </p>
              <div class="left">
@@ -109,7 +109,7 @@
                   </div>
                   <div class="card__info related-card__info">
                     <div>
-                      <p> 0 recomendations</p>
+                      <p> 0 recommendations</p>
                     </div>
                     <div>
                       <a href="/{{ $item->id}}" class="card__link btn white-text">MORE INFO</a>

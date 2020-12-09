@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['middleware'=>['customAuth']], function()
    {
-      Route::get('Admn', 'HoutbayController@Admn');
-      Route::get('Admn/addApplicant', 'HoutbayController@addApplicant');
+      Route::get('Admin', 'HoutbayController@Admin');
+      Route::get('Admin/addApplicant', 'HoutbayController@addApplicant');
       
     });
 
-Route::post('Admn', 'HoutbayController@post');
+Route::post('Admin', 'HoutbayController@post');
 Route::get('/', 'HoutbayController@index');
 Route::get('login', 'HoutbayController@getlogin');
 Route::post('login', 'HoutbayController@login');

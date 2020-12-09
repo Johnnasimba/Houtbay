@@ -21,7 +21,7 @@
           </div>
           <div class="card__info">
             <div>
-              <p> {{ $Applicant->recomendations }} recomendations</p>
+              <p> {{ $Applicant->recommendations }} recommendations</p>
             </div>
             <div>
               <a href="#" class="card__link btn white-text">MORE INFO</a>

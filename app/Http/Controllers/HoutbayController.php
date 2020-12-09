@@ -55,7 +55,7 @@ public function search(Request $request) {
       $clients = DB::table('clients') 
       ->join('applicants', function($join){ $join->on('clients.contact_id', '=', 'applicants.id');})
       ->get();
-      return view('Admn',  ['clients'=>$clients]);
+      return view('Admin',  ['clients'=>$clients]);
   } else{   
       session()->forget('data');   
       return redirect('/login')->with('mssg', 'Email and password does not match!');
@@ -77,8 +77,8 @@ public function about() {
     session()->forget('data');
    return redirect('login');
 }
-public function Admn() { 
-   return view('Admn',);  
+public function Admin() { 
+   return view('Admin',);  
 }
  public function addApplicant() {
    session()->forget('data'); 
@@ -150,7 +150,7 @@ public function post(Request $request) {
      $client->message = request('message');
      $client->contact_id = request('id');
      $client->save();
-     return back()->with('success', 'Message sent successifully');
+     return back()->with('success', 'Message sent successfully');
  }
 
  public function recommendation($id) {

@@ -39,9 +39,9 @@
             </li>
         </ul>
         
-            <!--Search bar and admn -->
-      <div id="Admn">         
-          <a href="login" class="white-text" class="right">Admn</a>
+            <!--Search bar and admin -->
+      <div id="Admin">         
+          <a href="login" class="white-text" class="right">Admin</a>
       </div>               
     </div>
 </nav>

@@ -3,7 +3,7 @@
 @section('body')
 <div class="container ">
     <h4>Fill in appropriate information of the applicant below</h4>
-     <form action="/Admn" method="POST" enctype="multipart/form-data">
+     <form action="/Admin" method="POST" enctype="multipart/form-data">
       @csrf
         <label for="firstName" class="label">First Name</label>
         <input type="text" id="firstName" name="firstName" required>

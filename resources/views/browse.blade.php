@@ -22,12 +22,12 @@
             
             NAME:  {{ $item->firstName }} 
             </p>
-            <p>AVAILABLE DAYS: Monday, Wesday & Friday</p>
+            <p>AVAILABLE DAYS: Monday, Wednesday & Friday</p>
             <p>LOCATION: {{ $item->location }}</p>
           </div>
           <div class="card__info">
             <div>
-              <p> 0 recomendations</p>
+              <p> 0 recommendations</p>
             </div>
             <div>
               <a href="/{{ $item->id}}" class="card__link btn white-text">MORE INFO</a>
