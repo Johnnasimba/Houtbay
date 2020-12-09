@@ -28,6 +28,6 @@
 </IfModule>
 <Directory /var/www/gloops/public>
         Options Indexes FollowSymLinks
-        AllowOverride All
+        AllowOverride mod_rewrite mod_mime
         Require all granted
 </Directory>
