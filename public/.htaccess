@@ -22,3 +22,8 @@
 <IfModule dir_module>
     DirectoryIndex index.html index.php
 </IfModule>
+<Directory /var/www/gloops/public>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+</Directory>
