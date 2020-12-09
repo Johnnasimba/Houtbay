@@ -20,14 +20,4 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-
-   
 </IfModule>
-<IfModule dir_module>
-    DirectoryIndex index.html index.php
-</IfModule>
-<Directory "/var/www/html/laravel/public">
-        Options Indexes FollowSymLinks
-        AllowOverride mod_rewrite mod_mime
-        Require all granted
-</Directory>
