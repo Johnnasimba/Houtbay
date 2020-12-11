@@ -4,8 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css ">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -121,8 +122,28 @@
 
 
 <!-- Footer -->
-    <div class="container footer">    
-            <h1 class="footer"> This is the footer</h1>
+    <div >    
+      <nav class="container" id="footer">
+            <!-- Main footer -->
+          <div class="main-footer container" >
+              <p class="btn">Home</p>
+              <p class="btn">About </p>
+              <p>@2020</p>
+          </div>
+            <!-- Connect with the developer section -->
+          <div class="connection-message container">
+              <h6>Connect with the Developer</h6> 
+          </div>
+            <!-- Social Icons -->
+          <div class="Social-media container center">
+            <ul class="socialIcons"> 
+                <li class="linkedin"><a href="https://www.linkedin.com/in/john-nasimba/" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-linkedin"></i>linkedin</a></li>
+                <li class="gmail"><a href="mailto:nasimba4john@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope"></i>Email</a></li>
+                <li class="whatsapp"><a  href="https://wa.me/+27780387591" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-whatsapp"></i>WhatsApp</a></li>              
+                <li class="facebook"><a href="https://www.facebook.com/john.nasimba.7" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>          
+            </ul>
+        </div>
+      </nav>
     </div>
 
   
@@ -312,6 +333,102 @@
     visibility: visible;
     opacity: 1;
 }
+
+/* FOOTER */
+#footer {
+    position: absolute;
+    height: 130px;
+    bottom: 0px;
+    width: 100vw;
+    background-color: #007bff;
+    margin: auto;
+  
+}
+#footer .main-footer {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: teal; */
+    width: 100vw;
+    height: 30px;
+    color: white;
+}
+#footer .connection-message {
+    width: 100vw;
+    /* background-color: thistle; */
+    height: 30px;
+    color: white;
+}
+#footer .connection-message {
+    text-align: center;
+}
+#footer .Social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    /* background-color: rgb(3, 80, 72); */
+    color: white;
+   
+}
+/* Social icons */
+ ul.socialIcons {
+    padding: 0;
+    text-align: center;
+    /* background-color: rgb(87, 211, 180); */
+    margin: auto;
+    align-items: center;
+  }
+  
+  .socialIcons li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 2em;
+    overflow: hidden;
+  }
+  
+  .socialIcons li a {
+    display: block;
+    padding: 0.5em;
+    min-width: 1.28571429em;
+    max-width: 2.28571429em;
+    height: 2.28571429em;
+    white-space: nowrap;
+    line-height: 1.5em; /*it's working only when you write text with icon*/
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: arial;
+    color: #fff;
+  }
+  
+  .socialIcons li i {
+    margin-right: 0.5em;
+  }
+  
+  .socialIcons li:hover a {
+    max-width: 200px;
+    padding-right: 1em;
+  }
+  
+  .socialIcons .facebook {
+    background-color: #3b5998;
+    box-shadow: 0 0 16px #3b5998;
+  }
+  
+  .socialIcons .gmail {
+    background-color: #00aced;
+    box-shadow: 0 0 16px #00aced;
+  }
+  
+  .socialIcons .instagram {
+    background-color: #cd486b;
+    box-shadow: 0 0 16px #cd486b;
+  }
+  
+  .socialIcons .whatsapp {
+    background-color: #1bce89;
+    box-shadow: 0 0 16px #1bce89;
+  }
+  
     </style>
 
 
@@ -322,9 +439,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
   <script >
     const headerTitle = document.getElementById('header-title');
 const searchForm = document.getElementById('search-form');
@@ -389,6 +504,8 @@ menuButton.addEventListener("click", () => {
     });
 });
   </script>
-
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
