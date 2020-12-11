@@ -1,351 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css ">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css""> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">  
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat:600&display=swap'>  
-               
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Houtbay Job Applicants</title>
-</head>
-<!--<body class="#757575 grey darken-1"> -->
-<body class="white">
-<div id="header">
-<nav class="nav-wapper">
-            <!--Job type selectin bar -->
-    <div class="">  
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <ul > 
-           <li><a href="" class="sidenav-trigger" data-target="mobile-links"> <i class="material-icons">menu</i>  </a>  </li>   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 
-           <div class="hide-on-med-and-down"> 
-                <li> <div id="home"> <a href="/"><i class="material-icons">home</i></a> </div> </li>  
-                <li > <a href="/browse/General">General Workers</a>  </li>
-                <li> <a href="/browse/Gardener">Gardeners</a>  </li>
-                <li> <a href="/browse/Driver">Drivers</a>  </li>
-                <li> <a href="/browse/House">House Keepers</a> </li>
-                <li> <a href="#" class="dropdown-trigger" data-target="dropdown" id="arrow-down"> <i class="fa fa-angle-down" aria-hidden="true"></i></i> </a> </li>
+    <title>Hout Bay Job Seekers</title>
+  </head>
+
+  <body>
+      <div>
+          <!-- Header -->
+          <div class="container" id="header">
+
+              <!-- Menu button -->
+              <div class="navbar navbar-white btn " id="menu-button">
+                <i class="material-icons">menu</i>
+              </div>
+
+            
+             
+            <!-- Title -->
+            <nav class="header-navbar navbar navbar-dark " id="header-title" >
+                <div class="header-title">
+                    <a class="navbar-brand" href="#">Hout Bay Job Seekers</a>
+                </div>
+            </nav>  
+
+            <!-- Search form -->
+            <div id="search-form" >
+                <form action="search" method="get" class="search-form"  >
+                   @csrf     
+                    <input type="search" placeholder="Search" name="search">
+                    <button  id="search-button" type="submit">Search</button>
+                </form>
             </div>
-            <li class="search">
-                <form action="search" method="get" >
-                @csrf                  
-                <input type="text" placeholder="search" name="search" class="white">
-                <button class="fa fa-search btn" type="submit"></button>
-                 </form> 
-            </li>
-        </ul>
+            
+
+            <!-- Search icon -->
+            <div class="navbar navbar-white btn " id="search-icon">
+                 <i class="material-icons">search</i>
+
+             </div>
+        </div> 
+
+          <!-- Side Nav -->
+        <div class="preload">
+        <nav class="nav"  id="side-nav">
+            <div class="nav__links">
+                <a href="#" class="nav__link">
+                    <i class="material-icons">home</i>
+                    Home
+                </a>
+                <a class="nav__link" href="#">
+                    <i class="material-icons">info</i>
+                    About
+                </a>
+                <a class="nav__link " href="#">
+                    <i class="material-icons">contact_page</i>
+                    Contact
+                </a>
+               
+                <a class="nav__link" href="#">
+                    <i class="material-icons">admin_panel_settings</i>
+                   Admin
+                </a>
+            </div>
+            <div class="nav__overlay"  id="nav__overlay"></div>
+        </nav>
+    </div>
+
+
+                <!--  Category Navigation  -->
+            <!-- <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">Gardener</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Driver</a></li>
+                    <li class="page-item"><a class="page-link" href="#">House keeper</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> -->
         
-            <!--Search bar and admin -->
-      <div id="Admin">         
-          <a href="login" class="white-text" class="right">Admin</a>
-      </div>               
+           
+            
+
+
+
+
+
+
+
+        <!-- Content body -->
+        <div class="container content">
+            @yield('body')
+        </div>
+
+        
+   
+   
+
+
+
+
+
+
+
+<!-- Footer -->
+    <div class="container footer">    
+            <h1 class="footer"> This is the footer</h1>
     </div>
-</nav>
 
-
-<ul class="sidenav" id="mobile-links">
-    <li > <a href="/browse/General">General Workers</a>  </li>
-    <li> <a href="/browse/Gardener">Gardeners</a>  </li>
-    <li> <a href="/browse/Driver">Drivers</a>  </li>
-    <li> <a href="/browse/House">House Keepers</a> </li>
-    <li> <a href="/browse/Painter">Painter</a></a> </li>
-    <li > <a href="/browse/Brick">Brick Layers</a>  </li>
-    <li> <a href="/browse/Plumber">Plumber</a>  </li>
-    <li> <a href="/browse/Shop">Shop assistance</a>  </li>
-    <li> <a href="/browse/Baby">Baby sitter</a></a> </li>
-</ul>
-
-<ul id="dropdown" class="dropdown-content ">
-    <li class="dropdown-list"> <a href="/browse/Painter">Painter</a></a> </li>
-    <li class="dropdown-list"> <a href="/browse/Brick">Brick Layers</a>  </li>
-    <li class="dropdown-list"> <a href="/browse/Plumber">Plumber</a>  </li>
-    <li class="dropdown-list"> <a href="/browse/Shop">Shop assistance</a>  </li>
-    <li class="dropdown-list"> <a href="/browse/Baby">Baby sitter</a></a> </li>
-</ul>
-
-
-  </div>
-  <div id="bodyPlusPagination">
-    <div id="content">
-        @yield('body')
-    </div>
-<!--FOOTER-->
-</div>
-<div>
-<nav class="nav-wrapper" id="footer">
-  <div class="left">
-      <ul>
-          <li > <a href="/">HOME</a>  </li>
-          <li> <a href="about">ABOUT</a>  </li>  
-          <li> @2020</li>                
-      </ul>
-  </div>
- 
   
-  <div class="right" id="footer-icons">
-      <h6>Contact the developer</h6>
-      <ul class="socialIcons"> 
-          <li class="gmail"><a href="mailto:nasimba4john@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope"></i>Email</a></li>
-          <li class="whatsapp"><a  href="https://wa.me/+27780387591" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-whatsapp"></i>WhatsApp</a></li>              
-          <li class="facebook"><a href="https://www.facebook.com/john.nasimba.7" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>          
-          <li class="instagram"><a href="https:///www.instagram.com/johnnasimba/?hl=en" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
-      </ul>
-  </div>
-</nav>
-@include('sweetalert::alert')
-</div>
-<style>
-    #content {
-        margin-bottom: 100px;
-    }
-  #bodyPlusPagination nav {
-        background-color: white ;
-        margin: auto;
-        width: 200px;
-    }
-    #bodyPlusPagination .pagination li{
-    color: black;
-    display: inline-block;
-    justify-content: center;
-    align-content: center;
-    font-size: 2.0rem;
-    margin: auto;
-    width: 40px;
-    padding: 10px;
-    line-height: 30px;
-}
-#bodyPlusPagination .pagination .active {
-    background-color:  white;
-    padding: 10px;
-    text-shadow: 2px 2px #0277bd;
-
-}
-.search {
-  position: relative;
-  color: #aaa;
-  font-size: 16px;
-}
-
-.search input {
-  min-width: 199px;
-  max-width: 200px;
-  height: 32px;
-
-  background: #fcfcfc;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
-}
-
-.search input { text-indent: 32px;}
-.search .fa-search { 
-  position: absolute !important;
-  top: 0px t;
-  left: 150px !important;
-}
-nav .search {
-    display: inline-flex;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-@media only screen and (max-width: 800px) {
-          
-          nav .search {
-              display: inline-flex;
-              margin-left: 10px;              
-              margin-top: 5px;          
-          }
-          #Admn {
-              margin-right: 10px;
-          }
-      }
-
-
-/*HEADER STYLES*/
-
-.wrapper {
-    position: absolute !important;
-    transform: translate(-50%, -50% )!important;
-    margin-left: 94% !important;
-  }
-  
-  .search-box {
-    position: relative !important;
-  
-  }
-  
-  .input {
-    position: absolute !important;
-    top: 5px !important;
-    right: 50px !important;
-    box-sizing: border-box !important;
-    width: 0px !important;
-    height: 55px !important;
-    padding: 0 20px !important;
-    outline: none !important;
-    font-size: 18px !important;
-    border-radius: 50px !important;
-    color: white !important;
-    border: 1px solid white !important;
-    transition: all 0.8s ease !important;
-  }
-  
-  ::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #757575 grey;
-  }
-  ::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #757575 grey;
-  }
-  :-ms-input-placeholder {
-    /* IE 10+ */
-    color: #757575 grey;
-  }
-  :-moz-placeholder {
-    /* Firefox 18- */
-    color: #757575 grey;
-  }
-  
-  nav .btn {
-    position: absolute !important;
-    width: 50px !important;
-    height: 50px;
-    background: #0093E3 !important;
-    border-radius: 50% !important;
-    right: 45px !important;
-    top: 0px !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    line-height: 50px !important;
-    font-size: 24px !important;
-    color: white !important;
-    transition: all 0.8s ease !important;
-  }
-  nav .btn:hover {
-    background: #0277bd !important;
-  }
-  #Admn {
-      margin-left: 90%;
-  }  
-  nav #arrow-down {
-      margin-top: 15px;
-      font-size: 30px;
+    <style>
       
-  }
-  
-  .nav-wapper {
-      background: #0093E3 !important;
-      color: white !important;
-  }
-  nav #home {
-      width: 50% !important;
-  }
-  ul .dropdown-list a{
-    color: white !important;
-  }
-  ul .dropdown-list{
-    background: #0093E3 !important;
-    
-  }
-  ul .dropdown-list:hover {
-  background: #0277bd !important;
-  }
+#header {
+    background-color:#0093E3 ;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
 
-#content {
-  margin-top: 20px;
-  margin-bottom: 200px;
+#menu-button {
+    background-color:#0093E3 ;
+    color: white;
+    padding-left: 0px;
+}
+#menu-button:hover {
+    filter: brightness(80%);
+}
+#menu-button img {
+    color: white;
+    
+}
+#header-title{
+    margin-right: 0px;
+    padding-right: 0px;
+}
+#header-title:hover {
+    filter: brightness(80%);
+}
+
+
+#header .search-form {
+    display: flex;
+    justify-content: flex-end;
+    background-color:#0093E3 ;
+    width: 200px;
+    margin-right: 0px;
+    height: 50px;
+}
+
+#header .search-form input {
+    min-width: 160px;
+    margin: 5px 0px 7px 7px;
+    height: 40px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.2em;
+}
+#search-button {
+   width: 100px;
+   height: 40px;
+   border: 1px solid white;
+   border-radius: 5%;
+   color: white;
+   background-color: #0093E3;
+   margin: 5px 10px 7px 5px;
+
+}
+ #search-button:hover {
+    filter: brightness(80%);
+ }
+ #search-icon {
+    background-color: #0093E3;
+    margin: 5px 10px 7px 0px;
+    padding-left: 0px;
+    color: white;
+ }
+#search-icon:hover {
+    filter: brightness(80%);
+}
+
+
+
+/* Display search icon only on small screens */
+@media only screen and (min-width: 500px) {
+    #search-icon {
+        display: none;
+    }
+}
+
+/* Hide  search form on small screens. It will only be displayed on click on Search-icon */
+@media only screen and (max-width: 500px) {
+    #search-form {
+        display: none;
+    } 
+}
+ @media only screen and (max-width: 350px) {
+    #header-title {
+        margin: 5px 0px 10px 0px;
+        padding: 0px;
+    } 
+    #menu-button {
+        padding-left: 0px;
+    }
+}
+ @media only screen and (max-width: 750px) {
+    #header-title {
+        margin: 5px 0px 10px 0px;
+        padding: 0px;
+    } 
+    #menu-button {
+        padding: 0px;
+    }
 }
 
 
 
 
-  /*STYLES FOR THE FOOTER*/
-  #footer{
-    position: fixed !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 4rem !important;
-    background: #0093E3 !important;
-    text-align: center !important;
-    border: 3px solid #0093E3 !important;    
-  }
-  #footer-icons {
-    display: inline-flex;
-  }
-  ul.socialIcons {
-    padding: 0;
-    text-align: center;
-  }
-  
-  .socialIcons li {
-    list-style: none;
-    display: inline-block;
-    margin: 10px;
-    border-radius: 2em;
-    overflow: hidden;
-  }
-  
-  .socialIcons li a {
-    display: block;
-    padding: 0.5em;
-    min-width: 1.28571429em;
-    max-width: 2.28571429em;
-    height: 2.28571429em;
-    white-space: nowrap;
-    line-height: 1.5em; /*it's working only when you write text with icon*/
-    transition: 0.5s;
-    text-decoration: none;
-    font-family: arial;
-    color: #fff;
-  }
-  
-  .socialIcons li i {
-    margin-right: 0.5em;
-  }
-  
-  .socialIcons li:hover a {
-    max-width: 200px;
-    padding-right: 1em;
-  }
-  
-  .socialIcons .facebook {
-    background-color: #3b5998;
-    box-shadow: 0 0 16px #3b5998;
-  }
-  
-  .socialIcons .gmail {
-    background-color: #00aced;
-    box-shadow: 0 0 16px #00aced;
-  }
-  
-  .socialIcons .instagram {
-    background-color: #cd486b;
-    box-shadow: 0 0 16px #cd486b;
-  }
-  
-  .socialIcons .whatsapp {
-    background-color: #1bce89;
-    box-shadow: 0 0 16px #1bce89;
-  }
-
-  #searh {
-    display: inline-block;
-    margin-left: 90%;
-    margin-top: 10px;
+/* Side Nav  */
+#preload * {
+    transition: none !important;
     
 }
-</style>
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333333;
+    display: flex;
+}
+
+.header__button {
+    flex-shrink: 0;
+    background: none;
+    outline: none ;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.nav__links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 250px;
+    background: #ffffff;
+    transform: translateX(-250px);
+    transition: transform 0.3s;
+    
+}
+
+.nav--open .nav__links {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none !important;
+    padding: 12px 15px;
+    background: transform 0.2s;
+}
+
+.nav__link > i {
+    margin-right: 15px;
+}
+.nav__link:hover {
+    background: #eeeeee;
+    color: teal;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav--open .nav__overlay {
+    visibility: visible;
+    opacity: 1;
+}
+    </style>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="/script/script.js"></script>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script >
+    const headerTitle = document.getElementById('header-title');
+const searchForm = document.getElementById('search-form');
+const searchIcon = document.getElementById('search-icon');
+const searchButton = document.getElementById('search-button');
+const menuButton =  document.getElementById('menu-button')
+
+    // Create a media condition that targets view ports of screen width less than 500px
+
+const mediaQuery = window.matchMedia('(max-width: 500px)')
+
+
+function displayForm() {
+    searchIcon.hidden = true;
+    headerTitle.hidden = true;
+    searchForm.hidden = false;
+}
+function hideFormOnSearchButtonClick() {
+    searchIcon.hidden = false;
+    headerTitle.hidden = false;
+    if (mediaQuery.matches) {
+        searchForm.hidden = true
+    } else {
+        searchForm.hidden = false;
+      }
+}
+
+searchIcon.addEventListener('click', displayForm);
+searchButton.addEventListener('click', hideFormOnSearchButtonClick)
+
+// window.addEventListener('load', (event) => {
+
+//     // Check if the media query is true
+//     if (mediaQuery.matches) {
+//       searchForm.hidden = true
+//     }
+// });
+// function changeWhatToDisplay() {
+//     if (mediaQuery.matches) {
+//         // alert('the width is less than 500px');
+//         searchForm.hidden = true
+//       }
+// }
+// window.onresize = changeWhatToDisplay;
+
+
+// side nav scripts
+
+window.addEventListener("load", () => {
+    document.body.classList.remove("preload");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.getElementById("side-nav");
+
+menuButton.addEventListener("click", () => {
+        nav.classList.add("nav--open");
+    });
+
+    document.getElementById("nav__overlay").addEventListener("click", () => {
+        nav.classList.remove("nav--open");
+    });
+});
+  </script>
+
 </body>
 </html>
-
