@@ -38,21 +38,5 @@
      </form>
 </div>
 </div>
-<style>
-    form {
-         max-width: 500px;
-     }
-     form .file{
-         margin-top: 20px;
-     }
-     form .btn{
-         margin-top: 40px;
-     }
-     .search .fa-search {
-    position: absolute !important;
-    top: -40px !important;
-    left: 150px !important;
-}
 
-</style>
 @endsection

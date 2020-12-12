@@ -30,17 +30,4 @@
     </div>
  </div>
 
-
- <style>
-     #Admin-section{
-         background-color: white;
-         height: 100%;
-         margin-top: 0px;
-     }
-     #addBtn {
-       margin: 20px;
-     }
-     
- </style>
-
  @endsection
