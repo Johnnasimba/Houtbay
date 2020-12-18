@@ -1,4 +1,4 @@
-@extends('layouts.mainLayout');
+@extends('layouts.mainLayout')
 
 @section('body')
 <h5 class="center">Search results for {{$jobType}}</h5>

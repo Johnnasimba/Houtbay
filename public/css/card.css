@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+:root {
+    --primary-color: #f7bf17;
+    --linear: #ef5350;
+    --white: #fff;
+    --r-color: #d63031;
+    --light-b: #686de0;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.card-deck .card {
+    background-color: whitesmoke;
+    height: 460px;
+    max-width: 380px;
+    min-width: 340px;
+    margin-left: 0px;
+    padding: 0px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+.card-img-top {
+    /* background-color: thistle; */
+    height: 250px;
+    width: auto;
+   
+}
+.card-body {
+    background-color: wheat;
+    padding-left: 5px;
+    margin-bottom: 2px;
+    padding-bottom: 0px;
+    height: 50px !important;
+}
+.card-title {
+    display: flex;
+    list-style-type: none;
+    color: rgb(0, 151, 140);
+    margin-bottom: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-title li {
+   margin-right: 5px;
+}
+.card-text {
+    margin-bottom: 0px;
+
+}
+.card-text h6 {
+   margin: 0px;
+   padding: 3px;
+}
+
+.card-body span {
+    font-weight: 700;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+.available-days {
+    padding: 0px;
+}
+.available-days h6{
+    padding: 0px;
+    margin: 0px;
+}
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 0px;
+}
+/* Number of reviews */
+.number-of-reviews h5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    margin: 0px;
+    color: #888;
+    font-size: 1rem;
+    font-family: "roboto", sans-serif;
+}
+
+/* Rating stars */
+
+.card-footer .pdt-rate {
+    height: 40px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.rating-stars {
+    position: relative;
+    vertical-align: baseline;
+    color: #b9b9b9;
+    line-height: 10px;
+    float: left;
+}
+
+.grey-stars {
+    height: 100%;
+}
+
+.filled-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #f7bf17;
+}
+
+
+.filled-stars:before,
+.grey-stars:before {
+    content: "\2605\2605\2605\2605\2605";
+    font-size: 40px;
+    letter-spacing: 0px;
+    line-height: 40px;
+}
+.card-footer .filled-stars:before,
+.card-footer .grey-stars:before {
+    font-size: 40px;
+    line-height: 23px;
+}
+/* Average rating */
+.avg-rating {
+    padding-top: 3px;
+    color: #888;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "roboto", sans-serif;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .card-deck {
+        padding: 0px;
+        margin: 0px;
+    }
+    .card-deck .card {
+        width: 90% !important;
+        height: 500px;
+        margin: 10px;
+        padding: 5px;
+    }
+}
