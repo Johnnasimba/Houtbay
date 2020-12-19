@@ -197,14 +197,12 @@
 #footer .main-footer {
     display: flex;
     justify-content: space-between;
-    /* background-color: teal; */
     width: 100vw;
     height: 30px;
     color: white;
 }
 #footer .connection-message {
     width: 100vw;
-    /* background-color: thistle; */
     height: 30px;
     color: white;
 }
@@ -215,7 +213,6 @@
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    /* background-color: rgb(3, 80, 72); */
     color: white;
    
 }
@@ -223,7 +220,6 @@
  ul.socialIcons {
     padding: 0;
     text-align: center;
-    /* background-color: rgb(87, 211, 180); */
     margin: auto;
     align-items: center;
   }
