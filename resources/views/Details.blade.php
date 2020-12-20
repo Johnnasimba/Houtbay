@@ -3,128 +3,262 @@
 @section('body')
 
 @foreach($Applicant as $item)
-<div class="row">
-        
-        <div class="col " id="col-image">
-            <div class="container ">
-            <img class="" src="{{ asset('uploads/'.$item->image) }}" alt="">
-            </div>
-            <div class="container" id="personal-info">
-                <p><strong>NAME: </strong> <span class="right"> {{ $item->firstName }}</span></p>
-                <p><strong>SURNAME:</strong> <span class="right">{{ $item->lastName }}</p>
-                <p><strong>AGE:  </strong><span class="right"> {{ $item->age }} </span> </p>
-                <p><strong>GENDER:</strong> <span class="right">{{ $item->gender }} </span> </p>
-                <p><strong>NATIONALITY:</strong><span class="right"> {{ $item->nationality }} </span> </p>
-                <p><strong>Available days:</strong> <span class="right">{{ $item->available_days }} </span> </p>
-
-                <div class="container" id="recommendation">
-                  <h6 class="center">RECOMMENDATIONS</h6>
-                  <form method="POST" action="/{{$item->id}}">
-                  @csrf
-                    <label for="name">Your Name</label><br>
-                    <input type="text" name="name">
-                    
-                    <textarea name="recommend" id="recommed" cols="30" rows="10" placeholder="Recommend {{ $item->lastName }}"></textarea>
-                    <button type="submit" class="center btn">Post</button>
-                  </form>
-                  <div class="recPost  ">
-                      @foreach($recommendations as $recommendation)
-                    <p><strong>{{ $recommendation->name }}</strong></p>
-                    <p class=" blue lighten-4"> "<i> {{ $recommendation->recommendation }}"</i></p>
-                      @endforeach
+<div class="container" style="background-color:  #f9f9f9;">
+        <div class="applicant">
+          <!-- Applicant  details -->
+          <div class="applicant-details">
+              <div class="image img-fluid">
+                <img src="{{ asset('uploads/'.$item->image) }}" alt="John Nasimba">
+              </div>
+              <div class="personal-details">
+                <ul>
+                  <li>First Name:</li>
+                  <li>Last Name:</li>
+                  <li>Age:</li>
+                  <li>Gander:</li>
+                  <li>Nationality:</li>
+                  <li>Available days:</li>
+                </ul>
+                <ul>
+                  <li> {{ $item->firstName }}</li>
+                  <li>{{ $item->lastName }}</li>
+                  <li>{{ $item->age }} </li>
+                  <li>{{ $item->gender }}</li>
+                  <li>{{ $item->nationality }}</li>
+                  <li>{{ $item->available_days }}</li>
+                </ul>
+              </div>
+              <div class="extras">
+                  <div class="jobs-applied">
+                    <h6 >JOB TITLES</h6>
+                     <p>
+                      {{ $item->firstJob }}, 
+                      {{ $item->secondJob }}, 
+                      {{ $item->thirdJob }}, 
+                      {{ $item->forthJob}}
+                     </p>
                   </div>
-                </div>
-            </div>
-            
-        
+                  <div class="education">
+                    <h6 >EDUCATION</h6>
+                     <p class="rrb">
+                     {{ $item->qualification }}
+                     </p>
+                  </div>
+                  <div class="experience">
+                    <h6 >EXPERIENCE</h6>
+                     <p>
+                     {{ $item->experience }}
+                     </p>
+                  </div>
+                  <div class="reference">
+                    <h6 >REFERENCE</h6>
+                     <p>
+                      Available
+                     </p>
+                  </div>
+                  <div class="contact" style="display: none;">
+                    <a href="#" align="center" > CONTACT</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Applicant Rating -->
+              <section class="rating-review" id="ratingSection" >
+                <h4 align="center" class="rnrn">REVIEWS</h4>
+                  <div class="tri table-flex">
+                      <table>
+                          <tbody>
+                              <tr>
+                                  <!-- First table data -->
+                                  <td>
+                                      <div class="rnb rvl">
+                                          <h3>1.5/5.0</h3>
+                                      </div>
+                                      <div class="pdt-rate">
+                                          <div class="pro-rating">
+                                              <div class="clearfix rating marT8">
+                                                  <div class="rating-stars">
+                                                      <div class="grey-stars"></div>
+                                                      <div class="filled-stars" style="width: 60%"></div>
+                                                      
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="rnrn">
+                                          <p class="rars">No Reviews</p>
+                                      </div>
+                                  </td>
+  
+                                  <!-- Second table data -->
+                                  <td>
+                                      <div class="rpb">
+  
+                                          <div class="rnpb">
+                                              <label> 5 <i class="fa fa-star" ></i>  </label>
+                                              <div class="ropb">
+                                                  <div class="ripb" style="width:0%"></div>
+                                              </div>
+                                              <label>(0)</label>
+                                          </div>
+  
+                                          <div class="rnpb">
+                                              <label for=""> 4<i class="fa fa-star"></i> </label>
+                                              <div class="ropb">
+                                                  <div class="ripb" style="width:60%"></div>
+                                              </div>
+                                              <label>(2)</label>
+                                          </div>
+  
+                                          <div class="rnpb">
+                                              <label for=""> 3 <i class="fa fa-star" ></i> </label>
+                                              <div class="ropb">
+                                                  <div class="ripb" style="width:20%"></div>
+                                              </div>
+                                              <label>(1)</label>
+                                          </div>
+  
+                                          <div class="rnpb">
+                                              <label for=""> 2 <i class="fa fa-star" ></i> </label>
+                                              <div class="ropb">
+                                                  <div class="ripb" style="width:20%"></div>
+                                              </div>
+                                              <label>(1)</label>
+                                          </div>
+  
+                                          <div class="rnpb">
+                                              <label for=""> 1 <i class="fa fa-star" ></i>     </label>
+                                              <div class="ropb">
+                                                  <div class="ripb" style="width:0%"></div>
+                                              </div>
+                                              <label>(0)</label>
+                                          </div>
+                                          
+                                      </div>
+                                  </td>
+                                  <!-- Third table data -->
+                                  <td>
+                                      <div class="rrb">
+                                          <p>Please Review This Applicant</p>
+                                          <button class="rbtn opmd">Add Review</button>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      
+                      <div class="review-modal" style="display:none">
+                          <div class="review-bg"></div>
+                          <div class="rmp">
+  
+                              <div class="rpc">
+                                  <span>
+                                      <i class="fa fa-times" ></i>
+                                  </span>
+                              </div>
+                              <div class="rps" align="center">
+                                  <i class="fa fa-star" data-index="0" style="display: none;" ></i>
+                                  <i class="fa fa-star" data-index="1"></i>
+                                  <i class="fa fa-star" data-index="2"></i>
+                                  <i class="fa fa-star" data-index="3"></i>
+                                  <i class="fa fa-star" data-index="4"></i>
+                                  <i class="fa fa-star" data-index="5"></i>
+                              </div>
+                              <input type="hidden" value="" class="starRateV" />
+                              <input type="hidden" value="" class="rateDate" />
+  
+                              <div class="rptf" align="center">
+                                  <input type="text" class="raterName" placeholder="Enter your name..." />
+                              </div>
+  
+                              <div class="rptf" align="center">
+                                  <textarea name="" id="" class="rateMsg" placeholder="Describe your experience with this Applicant" cols="30" rows="10"></textarea>
+                              </div>
+                              <div class="rate-rror" align="center"></div>
+                              <div class="rpsb" align="center">
+                                  <button class="rpbtn">Post Review</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="bri">
+                      <div class="uscm">
+                          <div class="uscm-secs">
+  
+                              <div class="us-img">
+                                  <p>B</p>
+                              </div>
+  
+                              <div class="uscms">
+                                  <div class="us-rate">
+                                      <div class="pdt-rate">
+                                          <div class="pro-rating">
+                                              <div class="clearfix rating marT8">
+                                                  <div class="rating-stars">
+                                                      <div class="grey-stars"> </div>
+                                                      <div class="filled-stars" style="width: 60%"></div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="us-cmt">
+                                      <p>He is the best gardener</p>
+                                  </div>
+                                  <div class="us-nm">
+                                      <p>
+                                          <i>By
+                                              <span class="cmnm">Bright</span> on
+                                              <span class="cmdt"> 23 december, 2020</span>
+                                          </i>
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+          <!-- contact applicant -->
+          <div class="contact-applicant " align="center">
+            <p class="rnrn">SUBMIT THE FORM BELOW TO RECEIVE CONTACT INFORMATION OF JOHN NASIMBA</p>
+            <form method="POST" action="/" class="left" >
+            @csrf 
+               <!-- Full name -->
+              <div class="form-group">               
+                <label class="left" >Your Name</label>
+                <input type="text" name="name" placeholder="Enter your Name"
+                required minlength="3" maxlength="50" required>
+              </div>
+
+              <!-- Email Address -->
+              <div class="form-group">
+                <label class="left" >Email</label>
+                <input type="text" name="email" placeholder=" Youremail@address.com" required>
+              </div>
+              <!-- Phone number -->
+              <div class="form-group">
+                <label class="left" >Your Mobile Number</label>
+                <input type="number" name="number"  placeholder="Enter mobile number" required>
+                <input type="number" name="id" value="" style="display : none" >
+              </div>
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="" cols="30" rows="10" class="grey-text" placeholder="Tell as anything else you what to know about John "></textarea>
+              </div>
+              <!--Button -->
+              <div>
+                <button  type="button" class="btn btn-primary ">Send Message</button><br><br>
+                <h4 class="blue-text"></h4>
+              </div>            
+              
+          </form>
+          </div>
+
         </div>
-        <div class="col s12 m6 l4 " id="col-extra-info"> 
-            <h6 class="left"><strong> JOBS APPLIED</strong></h6><br>
-             <p>
-                {{ $item->firstJob }}, 
-                {{ $item->secondJob }}, 
-                {{ $item->thirdJob }}, 
-                {{ $item->forthJob}}
-            </p>
-
-            <h6 class="left"><strong> QUALIFICATION</strong></h6><br>
-            <p>{{ $item->qualification }}</p>
-           
-
-            <h6 class="left"><strong> EXPERIENCE</strong></h6><br>
-            <P>{{ $item->experience }}</P>
-            <h6 class="left"><strong>REFERENCE</strong></h6><br>
-            <P>{{ $item->reference }}</P>
-             <p>contact information reserved. </p>
-             <div class="left">
-                 <h6 class="light-blue-text">Submit the form below to receive contact information for JOHN. <br> It will be sent to you within 24hrs</h6>
-             </div><br><br><br>
-             <div class="container" id="login"> 
-    <h6 class="left">Contact</h6>
-
-    <form method="POST" action="/" class="left" >
-        @csrf
-        <label class="left" >Your Name</label>
-        <input type="text" name="name" placeholder="Enter your Name" required>
-
-        <label class="left" >Email</label>
-        <input type="text" name="email" placeholder="Enter your user email" required>
-
-        <label class="left" >Your Mobile Number</label>
-        <input type="number" name="number"  placeholder="Enter mobile number" required>
-        <input type="number" name="id" value="{{ $item->id }}" style="display : none" >
-
-        <label for="message">Message</label>
-        <textarea name="message" id="" cols="30" rows="10" class="grey-text">Please send me contact information for {{$item->firstName}} {{$item->lastName}} with an id of {{$item->extra_id}} </textarea><br>
-        <button  type="submit" class="btn right">Send Message</button><br><br>
-        <h4 class="blue-text">{{session('message') }}</h4>
-    </form>
-   
-  </div>
-      
-</div>
-@endforeach
-        
-        <div class="col s12 m12 l4 right" id="col-related"> 
-            <h6 class="center">RELATED</h6>
-            
-            <div class="cards related-cards">
-            @foreach($related as $item)
-                <div class="card">
-                    
-                        <img class="card__image related-card__image" src="{{ asset('uploads/'.$item->image) }}" alt="">
-                        
-                  <div class="card__content related-card__content">
-                    <p class="card-title" id="card-title">
-                        {{$item->firstName}}  {{$item->lastName}}
-                      </p>
-            
-                    <p>
-                        {{ $item->firstJob }}, 
-                        {{ $item->secondJob }}, 
-                        {{ $item->thirdJob }}, 
-                        {{ $item->forthJob}}
-                    </p>
-                    <p>LOCATION: Imizamo yethu</p>
-                  </div>
-                  <div class="card__info related-card__info">
-                    <div>
-                      <p> 0 recommendations</p>
-                    </div>
-                    <div>
-                      <a href="/{{ $item->id}}" class="card__link btn white-text">MORE INFO</a>
-                    </div>
-                  </div>
-                </div>
-               @endforeach
-        
-        
-                @include('sweetalert::alert')
-            </div>
-
-         </div>
+    </div>
  
- 
-    
+  @endforeach  
        
 @endsection
