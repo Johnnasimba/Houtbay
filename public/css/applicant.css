@@ -12,9 +12,13 @@
   
 }
 .applicant-details .img {
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 5px;
+}
+img {
+    width: 300px;
+    height: 300px;
 }
 .personal-details {
     /* background-color: cadetblue; */
@@ -32,9 +36,7 @@
     margin: 0px;
     padding: 0px;
 }
-.extras{
-    /* background-color: coral; */
-}
+
 .extras .contact {
     background: green;
     border-radius: 5px;

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="{{ asset('/css/card.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/footer.css') }}" rel="stylesheet">
  
     <link href="{{ asset('/css/applicant.css') }}" rel="stylesheet">
  
@@ -75,14 +76,14 @@
 
      
         <!-- Content body -->
-        <div class="container content">
+        <div class="container content" id="content">
             @yield('body')
         </div>
 
       
 
         <!-- Footer -->
-        <div >    
+        <div class="footer" >    
             <nav class="container" id="footer">
                     <!-- Main footer -->
                 <div class="main-footer container" >
@@ -105,6 +106,14 @@
                 </div>
             </nav>
         </div>
+        <style>
+            body {
+                background-color: #f9f9f9;
+            }
+            #content {
+                margin-top: 50px;
+            }
+        </style>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1936634b09.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ URL::asset('js/script.js') }}"></script>
