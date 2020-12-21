@@ -53,20 +53,20 @@
         <div class="preload">
             <nav class="nav"  id="side-nav">
                 <div class="nav__links">
-                    <a href="#" class="nav__link">
+                    <a href="/" class="nav__link">
                         <i class="material-icons">home</i>
                         Home
                     </a>
-                    <a class="nav__link" href="#">
+                    <a class="nav__link" href="/about">
                         <i class="material-icons">info</i>
                         About
                     </a>
-                    <a class="nav__link " href="#">
+                    <a class="nav__link " href="#contact">
                         <i class="material-icons">contact_page</i>
                         Contact
                     </a>
                 
-                    <a class="nav__link" href="#">
+                    <a class="nav__link" href="/Admin">
                         <i class="material-icons">admin_panel_settings</i>
                     Admin
                     </a>
@@ -78,7 +78,7 @@
     </div>
 
         <!-- Content body -->
-        <div class="container" id="content">
+        <div  id="content">
             @yield('body')
         </div>
 
@@ -95,6 +95,7 @@
             }
             #content {
                 margin-top: 50px;
+                margin-bottom: 100px;
             }
         </style>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
