@@ -18,7 +18,7 @@
             
         
         <div class="container form-group">
-            <h6 class="center red-text">{{session('mssg') }}</h6>
+            <h6 class="center ">{{session('mssg') }}</h6>
         </div>
     
         <button type="submit" class="btn btn-primary">Login</button>
@@ -46,6 +46,9 @@
         width: 100%;
         border-radius: 5px;
         padding: 10px;
+    }
+    #login h6 {
+        color: red;
     }
    
 </style>
