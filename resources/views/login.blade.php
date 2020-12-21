@@ -44,10 +44,10 @@
     #login form input {
         height: 40px;
         width: 100%;
+        border-radius: 5px;
+        padding: 10px;
     }
-    #login form button {
-
-    }
+   
 </style>
 
 
