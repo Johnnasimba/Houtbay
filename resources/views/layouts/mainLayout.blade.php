@@ -18,6 +18,7 @@
 
   <body>
           <!-- Header -->
+    <div class="main-header">
         <div class="container" id="header">
 
             <!-- Menu button -->
@@ -74,41 +75,23 @@
             </nav>
         </div>
 
-     
+    </div>
+
         <!-- Content body -->
-        <div class="container content" id="content">
+        <div class="container" id="content">
             @yield('body')
         </div>
 
       
 
         <!-- Footer -->
-        <div class="footer" >    
-            <nav class="container" id="footer">
-                    <!-- Main footer -->
-                <div class="main-footer container" >
-                    <p class="btn">Home</p>
-                    <p class="btn">About </p>
-                    <p>@2020</p>
-                </div>
-                    <!-- Connect with the developer section -->
-                <div class="connection-message container">
-                    <h6>Connect with the Developer</h6> 
-                </div>
-                    <!-- Social Icons -->
-                <div class="Social-media container center">
-                    <ul class="socialIcons"> 
-                        <li class="linkedin"><a href="https://www.linkedin.com/in/john-nasimba/" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-linkedin"></i>linkedin</a></li>
-                        <li class="gmail"><a href="mailto:nasimba4john@outlook.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope"></i>Email</a></li>
-                        <li class="whatsapp"><a  href="https://wa.me/+27780387591" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-whatsapp"></i>WhatsApp</a></li>              
-                        <li class="facebook"><a href="https://www.facebook.com/john.nasimba.7" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>          
-                    </ul>
-                </div>
-            </nav>
+        <div style="width: 100%;" >    
+           @include('components.footer')
         </div>
         <style>
             body {
                 background-color: #f9f9f9;
+                width: 100vw;
             }
             #content {
                 margin-top: 50px;

@@ -1,15 +1,16 @@
 .footer {
-  width: 100%;
-  background: #007bff;
+  width: 100vw;
+  background-color:#0093E3 ;
   height: 130px;
+  margin: 0px;
 }
 #footer {
     position: relative;
     height: 130px;
     bottom: 0px;
     width: 100vw;
-    background-color: #007bff;
-    margin-bottom: 0px;
+    background-color:#0093E3 ;
+    margin: 0px;
   
 }
 #footer .main-footer {
@@ -57,7 +58,7 @@
     max-width: 2.28571429em;
     height: 2.28571429em;
     white-space: nowrap;
-    line-height: 1.5em; /*it's working only when you write text with icon*/
+    line-height: 1.5em; 
     transition: 0.5s;
     text-decoration: none;
     font-family: arial;
