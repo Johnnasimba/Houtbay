@@ -1,32 +1,54 @@
 @extends('layouts.mainLayout')
 
 @section('body')
-<div id="Admin-section">
-  <div class="center " id="addBtn">
-    <a href="/Admin/addApplicant"><h5 class="btn">ADD NEW APPLICANT</h5></a>
-    <a href="logout" class="btn left">Logout</a>
-    <h4 class="mssg center">{{session('mssg') }}</h4>
-  </div>
-  
+<div class="container">
+        <!-- Buttons -->
+        <div class="buttons">
+            <div class="logout">
+                <button  class="btn btn-danger"> <a href="logout"></a> Logout</button>
+            </div>
+            <ul>
+                <li  class="btn"><a href="/Admin/addApplicant">ADD NEW APPLICANT</a> </li>
+                <li class="btn"><a href="#">UPDATE APPLICANT</a></li>
+                <li class="btn"><a href="#">DELETE APPLICANT</a></li>
+            </ul>
+        </div>
 
-  <div class="left">
-    <h5 class="center"> Client request will be displayed here</h5>
-
-   
-    <ul class="collection">
+        <!-- Client request -->
+        <div class="client-request">
+            <h4>CLIENT REQUEST</h4>
       @foreach($clients as $item)
-            <li class="collection-item avatar">
-
-              <span class="title"><strong>Client name</strong>  : {{ $item->name }}</span>
-                <p><strong>Contact</strong> : {{ $item->email }}</p>
-              <p><strong>Applicant selected</strong> : {{ $item->firstName }}  {{ $item->lastName }}</p>
-                <p><strong> Applicant id</strong> : {{ $item->contact_id }} </p>
-                <p><strong> Client message </strong> : {{ $item->message }}</p>
-              <a href="#!" class="secondary-content">Delete</a>
-            </li>
+      <section>
+                <div class="date">
+                    02 January, 2021
+                </div>
+                <div class="request-details">
+                    <ul>
+                        <li>Client Name:</li>
+                        <li>Phone number:</li>
+                        <li>Email Address:</li>
+                        <li>Applicant selected:</li>
+                        <li>Applicant ID:</li>
+                    </ul>
+                    <ul>
+                        <li> {{ $item->name }}</li>
+                        <li> ...</li>
+                        <li>{{ $item->email }}</li>
+                        <li> {{ $item->firstName }}  {{ $item->lastName }}</li>
+                        <li>{{ $item->contact_id }}</li>
+                    </ul>
+                </div>
+                <div class="client-message">
+                    <h6>MESSAGE</h6>
+                    "
+                    <i> {{ $item->message }}</i>
+                    "
+                </div>
+               
+            </section>
+            
         
         @endforeach   
-        </ul>
     </div>
  </div>
 

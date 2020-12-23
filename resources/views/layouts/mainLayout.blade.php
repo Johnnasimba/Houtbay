@@ -10,8 +10,8 @@
     <link href="{{ asset('/css/card.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/footer.css') }}" rel="stylesheet">
- 
     <link href="{{ asset('/css/applicant.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
  
     <title>Hout Bay Job Seekers</title>
   </head>

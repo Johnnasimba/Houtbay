@@ -1,0 +1,87 @@
+.buttons .logout a {
+    text-decoration: none;
+    color: white;
+}
+.buttons ul {
+    list-style-type: none;
+
+}
+        .buttons ul li:first-child {
+            background-color: rgb(10, 44, 238)
+        }
+        .buttons ul li:nth-child(2) {
+            background-color: green;
+        }
+        .buttons ul li:last-child {
+            background-color: brown;
+        }
+.buttons ul li {
+  
+    color: white;
+    margin: 5px;
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+
+}
+.buttons ul li a {
+    text-decoration: none;
+    color: white;
+}
+.buttons ul li:hover {
+    filter: brightness(50%);
+}
+
+
+
+.client-request h4{
+   text-align: center;
+    
+}
+.client-request section {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+.client-request .date {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.client-request .request-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0px;
+    padding: 0px;
+}
+.request-details ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.request-details ul li{
+    white-space: nowrap;
+}
+.client-message {
+    text-align: center;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width : 600px) {
+    .buttons ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .buttons ul li {
+        width: 400px;
+    }
+    .request-details ul {
+        margin: 10px;
+        padding: 20px;
+    }
+}
