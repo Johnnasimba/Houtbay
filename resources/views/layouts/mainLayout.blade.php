@@ -12,6 +12,7 @@
     <link href="{{ asset('/css/footer.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/applicant.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/addApplicant.css') }}" rel="stylesheet">
  
     <title>Hout Bay Job Seekers</title>
   </head>
@@ -29,7 +30,7 @@
             <!-- Title -->
             <nav class="header-navbar navbar navbar-dark " id="header-title" >
                 <div class="header-title">
-                    <a class="navbar-brand" href="#">Hout Bay Job Seekers</a>
+                    <a class="navbar-brand" href="/">Hout Bay Job Seekers</a>
                 </div>
             </nav>  
 

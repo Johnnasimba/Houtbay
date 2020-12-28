@@ -6,6 +6,7 @@
         <div class="buttons">
             <div class="logout">
                 <button  class="btn btn-danger"> <a href="logout"></a> Logout</button>
+                <button class="btn btn-info" ><a href="#">Sign up new user Admin</a> </button>
             </div>
             <ul>
                 <li  class="btn"><a href="/Admin/addApplicant">ADD NEW APPLICANT</a> </li>
