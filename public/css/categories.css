@@ -1,0 +1,39 @@
+
+    .categories {
+    background: white;
+    overflow: auto;
+    position: sticky;
+    top:0;
+    left: 0;
+    padding: 15px 0;
+    white-space: nowrap;
+    }
+    .links {
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+    background:whitesmoke;
+    margin: 0 5px;
+    display: inline-block;
+    font-size: 1.1rem;
+    cursor: pointer;
+    }
+    .links a{
+    text-decoration: none;
+    outline: none;
+    color:#212121;
+    text-transform: capitalize;
+    transition: 0.3s;
+    }
+    .links:hover {
+    filter: brightness(80%);
+    }
+    ::-webkit-scrollbar {
+    height: 7px;
+    background: #fff;
+    }
+    ::-webkit-scrollbar-thumb {
+    height: 7px;
+    background: #212121;
+    }
+    
