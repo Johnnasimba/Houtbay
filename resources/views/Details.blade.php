@@ -3,25 +3,19 @@
 @section('body')
 
         <?php 
-           print_r(json_encode($rates));
-            echo $numRates;
-            echo $totalRates;
-
-
             $avg = '';
             if($numRates != 0) {
-                if(is_nan(round(($totalRates / $numRates), 1))) {
+                if(is_nan(round(($totalRates / $numRates), 2))) {
                     $avg = 0;
                 }
                 else {
-                    $avg = round(($totalRates / $numRates), 1);
+                    $avg = round(($totalRates / $numRates), 2);
                 }
             }
             else {
                 $avg = 0;
             }
-                echo $avg;
-
+             
           ?>
 
 
@@ -210,11 +204,14 @@
                       <div class="uscm">
 
                       <!-- Loop through user reviews here -->
+                      @foreach($rates as $rate)
 
                           <div class="uscm-secs">
   
                               <div class="us-img">
-                                  <p>B</p>
+                                  <p>
+                                      {{substr($rate->userName, 0, 1)}}
+                                  </p>
                               </div>
   
                               <div class="uscms">
@@ -224,26 +221,28 @@
                                               <div class="clearfix rating marT8">
                                                   <div class="rating-stars">
                                                       <div class="grey-stars"> </div>
-                                                      <div class="filled-stars" style="width: 60%"></div>
+                                                      <div class="filled-stars" style="width: {{$rate->userReview * 20}}%"></div>
                                                   </div>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="us-cmt">
-                                      <p>He is the best gardener</p>
+                                      <p>
+                                          {{$rate->userMessage}}
+                                      </p>
                                   </div>
                                   <div class="us-nm">
                                       <p>
                                           <i>By
-                                              <span class="cmnm">Bright</span> on
-                                              <span class="cmdt"> 23 december, 2020</span>
+                                              <span class="cmnm"> {{$rate->userName}} </span> on
+                                              <span class="cmdt"> {{$rate->dateReviewed}} </span>
                                           </i>
                                       </p>
                                   </div>
                               </div>
                           </div>
-
+                        @endforeach
                           <!-- End of user review loop -->
                       </div>
                   </div>

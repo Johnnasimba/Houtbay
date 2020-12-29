@@ -2,6 +2,9 @@
  @section('body')
  
  @include('components.categories')
+
+
+ 
   <div class="container">
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
