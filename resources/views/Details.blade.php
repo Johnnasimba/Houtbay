@@ -2,10 +2,33 @@
 
 @section('body')
 
-@foreach($Applicant as $item)
+        <?php 
+           print_r(json_encode($rates));
+            echo $numRates;
+            echo $totalRates;
+
+
+            $avg = '';
+            if($numRates != 0) {
+                if(is_nan(round(($totalRates / $numRates), 1))) {
+                    $avg = 0;
+                }
+                else {
+                    $avg = round(($totalRates / $numRates), 1);
+                }
+            }
+            else {
+                $avg = 0;
+            }
+                echo $avg;
+
+          ?>
+
+
 <div class="container" style="background-color:  #f9f9f9;">
         <div class="applicant">
           <!-- Applicant  details -->
+          @foreach($Applicant as $item)
           <div class="applicant-details">
               <div class="image img-fluid">
                 <img src="{{ asset('uploads/'.$item->image) }}" alt="John Nasimba">
@@ -61,8 +84,9 @@
                   </div>
               </div>
           </div>
-
+          @endforeach  
           <!-- Applicant Rating -->
+        
               <section class="rating-review" id="ratingSection" >
                 <h4 align="center" class="rnrn">REVIEWS</h4>
                   <div class="tri table-flex">
@@ -72,21 +96,21 @@
                                   <!-- First table data -->
                                   <td>
                                       <div class="rnb rvl">
-                                          <h3>1.5/5.0</h3>
+                                          <h3><?php echo $avg; ?> /5.0</h3>
                                       </div>
                                       <div class="pdt-rate">
                                           <div class="pro-rating">
                                               <div class="clearfix rating marT8">
                                                   <div class="rating-stars">
                                                       <div class="grey-stars"></div>
-                                                      <div class="filled-stars" style="width: 60%"></div>
+                                                      <div class="filled-stars" style="width:<?php echo ($avg * 20) ?>%"></div>
                                                       
                                                   </div>
                                               </div>
                                           </div>
                                       </div>
                                       <div class="rnrn">
-                                          <p class="rars">No Reviews</p>
+                                          <p class="rars"> <?php if($numRates == 0){echo "No";}else{echo $numRates;}; ?> Reviews</p>
                                       </div>
                                   </td>
   
@@ -184,6 +208,9 @@
   
                   <div class="bri">
                       <div class="uscm">
+
+                      <!-- Loop through user reviews here -->
+
                           <div class="uscm-secs">
   
                               <div class="us-img">
@@ -216,6 +243,8 @@
                                   </div>
                               </div>
                           </div>
+
+                          <!-- End of user review loop -->
                       </div>
                   </div>
               </section>
@@ -259,6 +288,6 @@
         </div>
     </div>
  
-  @endforeach  
+
        
 @endsection

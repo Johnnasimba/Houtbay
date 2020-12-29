@@ -133,12 +133,18 @@ public function post(Request $request) {
             ->where('id', '!=',  $relatedId)
             ->limit(4)
             ->get();
-   $recommendations = DB::table('recommendations')
-            ->where('recommendation_id', '=', $id)
-            ->limit(5)
+   $rates = DB::table('rates')
+            ->where('applicant_id', '=', $id)
             ->get();
+   $numRates = DB::table('rates')
+            ->where('applicant_id', '=', $id)
+            ->count();
+   $totalRates = DB::table('rates')
+            ->where('applicant_id', '=', $id)
+            ->sum('userReview');
+            
    
-   return view('Details', ['Applicant'=>$Applicant,'related'=>$related, 'recommendations'=>$recommendations,]);
+   return view('Details', ['Applicant'=>$Applicant,'related'=>$related, 'rates'=>$rates, 'numRates'=>$numRates, 'totalRates'=>$totalRates]);
  }
 
  public function clientPost() {
