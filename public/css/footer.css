@@ -5,23 +5,37 @@
   margin: 0px;
 }
 #footer {
-    position: relative;
+  position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
     height: 130px;
     bottom: 0px;
     width: 100vw;
-    background-color:#0093E3 ;
-    margin: 0px;
+    background-color:#0093E3;
+    margin: auto;
   
 }
+
 #footer .main-footer {
     display: flex;
-    justify-content: space-evenly;
-    width: 100vw;
+    flex-direction: column;
+    justify-content: start;
+    width: 100px;
     height: 30px;
     color: white;
 }
+#footer .main-footer  a {
+  color:white;
+}
+#footer .connect {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #footer .connection-message {
-    width: 100vw;
     height: 30px;
     color: white;
 }
@@ -31,7 +45,7 @@
 #footer .Social-media {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     color: white;
    
 }

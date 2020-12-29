@@ -87,7 +87,7 @@
       
 
         <!-- Footer -->
-        <div style="width: 100%;" >    
+        <div style="width: 100%; bottom:0px; position:relative" >    
            @include('components.footer')
         </div>
         <style>
