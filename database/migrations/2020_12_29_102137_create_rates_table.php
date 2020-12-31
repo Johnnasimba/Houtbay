@@ -20,7 +20,6 @@ class CreateRatesTable extends Migration
             $table->string('userReview');
             $table->string('userMessage');
             $table->string('dateReviewed');
-            $table->timestamps();
         });
     }
 

@@ -6,6 +6,10 @@
 
  
   <div class="container">
+  <?php
+  echo $Applicants;
+
+  ?>
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
         <a href="/{{ $Applicant->id}}">
