@@ -1,7 +1,7 @@
 @extends('layouts.mainLayout')
 
 @section('body')
-<div class="container">
+<div class="container" id="admin-page">
         <!-- Buttons -->
         <div class="buttons">
             <div class="logout">

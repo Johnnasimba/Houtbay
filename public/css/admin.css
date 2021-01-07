@@ -1,4 +1,7 @@
-
+#admin-page {
+    margin-top: 20px;
+    margin-bottom: 200px;
+}
 .buttons .logout {
     display: flex;
     flex-direction: row;
