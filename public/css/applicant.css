@@ -3,6 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
 
+
+:root {
+    --primary-color: #f7bf17;
+    --linear: #ef5350;
+    --white: #fff;
+    --r-color: #d63031;
+    --light-b: #686de0;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#Applicant-page {
+    margin-top: 40px;
+    margin-bottom: 200px;
+}
 .applicant-details {
     background: #f9f9f9;
     display: flex;
@@ -63,19 +81,6 @@ img {
 
 /* RATING */
 
-
-:root {
-    --primary-color: #f7bf17;
-    --linear: #ef5350;
-    --white: #fff;
-    --r-color: #d63031;
-    --light-b: #686de0;
-}
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 .rating-review {
     height: 100%;
@@ -434,4 +439,12 @@ align-items: center;
 }
 .contact-applicant .form-group input {
     height: 50px;
+    padding-left: 10px;
+}
+.contact-applicant .form-group textarea {
+    padding-left: 10px;
+}
+.contact-applicant button {
+    background-color: var(--light-b);
+    color: white;
 }

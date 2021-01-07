@@ -19,7 +19,7 @@
           ?>
 
 
-<div class="container" style="background-color:  #f9f9f9;">
+<div class="container" id="Applicant-page" style="background-color:  #f9f9f9;">
         <div class="applicant">
           <!-- Applicant  details -->
           @foreach($Applicant as $item)
@@ -273,11 +273,11 @@
               <!-- Message -->
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea name="message" id="" cols="30" rows="10" class="grey-text" placeholder="Tell as anything else you what to know about John "></textarea>
+                <textarea name="message" id="" cols="30" rows="10" class="grey-text" placeholder="Anything else you would like to know in advance"></textarea>
               </div>
               <!--Button -->
               <div>
-                <button  type="button" class="btn btn-primary ">Send Message</button><br><br>
+                <button  type="submit" class="btn ">Send Message</button><br><br>
                 <h4 class="blue-text"></h4>
               </div>            
               
