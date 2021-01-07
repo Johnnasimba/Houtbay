@@ -29,6 +29,8 @@
        width: 300px;
        height: 300px;
        margin: 0 auto;
+       margin-top: 100px;
+       min-height: 100vh;
 
     }
     #login form {
