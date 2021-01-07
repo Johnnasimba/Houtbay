@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css ">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="{{ asset('css/card.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/categories.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/header.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/applicant.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/addApplicant.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/categories.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/card.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/header.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/footer.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/applicant.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/admin.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/css/addApplicant.css') }}" rel="stylesheet" type="text/css">
  
     <title>Hout Bay Job Seekers</title>
   </head>
