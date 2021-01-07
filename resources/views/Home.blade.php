@@ -3,21 +3,23 @@
  
  @include('components.categories')
 
-
+ 
  
   <div class="container">
-  <?php
-  echo $Applicants;
-
-  ?>
+    <!-- <?php  
+      echo json_encode($Applicants, JSON_PRETTY_PRINT);
+     
+    ?> -->
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
+
         <a href="/{{ $Applicant->id}}">
           <!-- An individual card -->
           <div class="card container">           
             <!-- card image -->
             <img class="card-img-top img-fluid" src="{{ asset('uploads/'.$Applicant->image) }}" alt="Card image cap">
             <!-- Card body -->
+        
             <div class="card-body">
                 <!-- Job titles -->
                 <ul class="card-title">

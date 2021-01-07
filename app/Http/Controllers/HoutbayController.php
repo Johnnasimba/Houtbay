@@ -16,18 +16,7 @@ class HoutbayController extends Controller
 {
  public function index() {
      $Applicants = DB::table('applicants')
-                  ->where("id", ">", 0)
-                  ->join('rates', 'applicants.id', "=", 'rates.applicant_id')
                   ->paginate(15);
-   //   $numRates = DB::table('applicants')
-   //                ->select('applicant_id', 'userReview')
-   //                ->get();
-      // $totalRates = DB::table('rates')
-      //             ->where('applicant_id', '=', $id)
-      //             ->sum('userReview');
-     
-
-      // ::where('id', '>', 0) 
     return view( 'Home', ['Applicants' =>$Applicants,] );
  }
 
