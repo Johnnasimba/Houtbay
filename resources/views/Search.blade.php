@@ -1,7 +1,7 @@
 @extends('layouts.mainLayout')
  @section('body')
  
-  <div class="container">
+  <div class="container" id="Search-container">
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
 
@@ -68,4 +68,11 @@
         @endforeach
     </div>
   </div>
+  <style>
+  #Search-container {
+    min-height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 200px;
+  }
+  </style>
 @endsection
