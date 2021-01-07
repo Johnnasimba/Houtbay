@@ -1,7 +1,7 @@
 @extends('layouts.mainLayout')
 
 @section('body')
-<div class="container ">
+<div class="container " id="addApplicant-page">
             <div id="addApplicant" align="center">
                 <h4>FILL THE FORM BELOW WITH APPROPRIATE INFORMATION OF THE NEW APPLICANT</h4>
                 <form action="/Admin" method="POST" enctype="multipart/form-data">

@@ -1,4 +1,7 @@
-
+#addApplicant-page {
+    margin-bottom: 200px;
+    margin-top: 20px;
+}
 
 #addApplicant form {
     display: flex;
@@ -9,6 +12,7 @@
     padding: 5px;
     width: 90vw;
     max-width: 400px;
+    margin-top: 20px;
 }
 #addApplicant .form-group {
     display: flex;
