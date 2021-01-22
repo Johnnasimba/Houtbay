@@ -78,7 +78,10 @@ public function about() {
    return redirect('login');
 }
 public function Admin() { 
-   return view('Admin',);  
+   $clientRequest = DB::table('clients')
+   ->join('applicants', function($join){ $join->on('clients.contact_id', '=', 'applicants.id');})
+   ->get();
+   return view('Admin',  ['clients'=>$clientRequest]);  
 }
  public function addApplicant() {
    session()->forget('data'); 
@@ -147,14 +150,14 @@ public function post(Request $request) {
    return view('Details', ['Applicant'=>$Applicant,'related'=>$related, 'rates'=>$rates, 'numRates'=>$numRates, 'totalRates'=>$totalRates]);
  }
 
- public function clientPost() {
+ public function clientPost($id) {
     $client = new Client();
 
      $client->name = request('name');
      $client->email = request('email');
      $client->number = request('number');     
      $client->message = request('message');
-     $client->contact_id = request('id');
+     $client->contact_id = $id;
      $client->save();
      return back()->with('success', 'Message sent successfully');
  }

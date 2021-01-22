@@ -33,7 +33,7 @@
                     </ul>
                     <ul>
                         <li> {{ $item->name }}</li>
-                        <li> ...</li>
+                        <li> {{ $item->number }}</li>
                         <li>{{ $item->email }}</li>
                         <li> {{ $item->firstName }}  {{ $item->lastName }}</li>
                         <li>{{ $item->contact_id }}</li>

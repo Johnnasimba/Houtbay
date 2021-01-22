@@ -248,9 +248,10 @@
                   </div>
               </section>
           <!-- contact applicant -->
+          @foreach($Applicant as $item)
           <div class="contact-applicant " align="center">
-            <p class="rnrn">SUBMIT THE FORM BELOW TO RECEIVE CONTACT INFORMATION OF JOHN NASIMBA</p>
-            <form method="POST" action="/" class="left" >
+            <p class="rnrn" style="text-transform: uppercase;">SUBMIT THE FORM BELOW TO RECEIVE CONTACT INFORMATION OF  {{ $item->firstName }}  {{ $item->lastName }} </p>
+            <form method="POST" action="/client/{{$item->id}}" class="left" >
             @csrf 
                <!-- Full name -->
               <div class="form-group">               
@@ -264,16 +265,17 @@
                 <label class="left" >Email</label>
                 <input type="text" name="email" placeholder=" Youremail@address.com" required>
               </div>
+            
               <!-- Phone number -->
               <div class="form-group">
                 <label class="left" >Your Mobile Number</label>
                 <input type="number" name="number"  placeholder="Enter mobile number" required>
-                <input type="number" name="id" value="" style="display : none" >
               </div>
               <!-- Message -->
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea name="message" id="" cols="30" rows="10" class="grey-text" placeholder="Anything else you would like to know in advance"></textarea>
+                <textarea name="message" id="" cols="30" rows="10" class="grey-text"
+                 placeholder="What else would you like to know about {{ $item->firstName }}  {{ $item->lastName }}" ></textarea>
               </div>
               <!--Button -->
               <div>
@@ -283,6 +285,7 @@
               
           </form>
           </div>
+          @endforeach
 
         </div>
     </div>

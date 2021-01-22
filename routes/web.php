@@ -29,7 +29,7 @@ Route::get('about', 'HoutbayController@about');
 Route::get('/browse/{jobType}', 'HoutbayController@browse');
 Route::get('search', 'HoutbayController@search'); 
 Route::get('/{id}', 'HoutbayController@details');
-Route::post('/', 'HoutbayController@clientPost');
+Route::post('/client/{id}', 'HoutbayController@clientPost');
 Route::post('/{id}', 'HoutbayController@recommendation');
 
 
