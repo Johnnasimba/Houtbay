@@ -5,7 +5,7 @@
         <!-- Buttons -->
         <div class="buttons">
             <div class="logout">
-                <button  class="btn btn-danger"> <a href="logout"></a> Logout</button>
+                <button  class="btn btn-danger"> <a href="/logout"> Logout</a> </button>
                 <button class="btn btn-info" id="signup-user-admin"><a href="#">Sign up new user Admin</a> </button>
             </div>
             <ul>

@@ -72,7 +72,8 @@
   #Search-container {
     min-height: 100vh;
     margin-top: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 0;
+    padding-bottom: 100px;
   }
   </style>
 @endsection

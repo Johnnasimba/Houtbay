@@ -75,7 +75,7 @@ public function about() {
  
  public function logout() {
     session()->forget('data');
-   return redirect('login');
+   return redirect('/');
 }
 public function Admin() { 
    $clientRequest = DB::table('clients')
