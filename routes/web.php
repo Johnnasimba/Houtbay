@@ -30,13 +30,4 @@ Route::get('/browse/{jobType}', 'HoutbayController@browse');
 Route::get('search', 'HoutbayController@search'); 
 Route::get('/{id}', 'HoutbayController@details');
 Route::post('/client/{id}', 'HoutbayController@clientPost');
-Route::post('/{id}', 'HoutbayController@recommendation');
-
-
-
-
-/*Route::get('/Home/{jobType}','HoutbayController@Filter');*/
-
-//Route::get('/', function () {
-  //  return view('welcome');
-//});
+Route::post('/details/{id}', 'HoutbayController@postRates');

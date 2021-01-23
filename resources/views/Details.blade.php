@@ -3,6 +3,8 @@
 @section('body')
 
         <?php 
+                $myDate = getdate(date('U'));
+                $date = "$myDate[weekday], $myDate[month] $myDate[mday], $myDate[year]";
             $avg = '';
             if($numRates != 0) {
                 if(is_nan(round(($totalRates / $numRates), 2))) {
@@ -167,8 +169,11 @@
                       
                       <div class="review-modal" style="display:none">
                           <div class="review-bg"></div>
-                          <div class="rmp">
-  
+
+                          <!-- Rating form -->
+                          @foreach($Applicant as $item)
+                          <form method="POST" action="/details/13" class="rmp">
+                                @csrf
                               <div class="rpc">
                                   <span>
                                       <i class="fa fa-times" ></i>
@@ -182,21 +187,22 @@
                                   <i class="fa fa-star" data-index="4"></i>
                                   <i class="fa fa-star" data-index="5"></i>
                               </div>
-                              <input type="hidden" value="" class="starRateV" />
-                              <input type="hidden" value="" class="rateDate" />
+                              <input type="hidden" name="user-review" value="" class="starRateV" />
+                              <input type="hidden" name="date-reviewed" value="<?php echo $date ?>" class="rateDate" />
   
                               <div class="rptf" align="center">
-                                  <input type="text" class="raterName" placeholder="Enter your name..." />
+                                  <input type="text" name="user-name" class="raterName" placeholder="Enter your name..." />
                               </div>
   
                               <div class="rptf" align="center">
-                                  <textarea name="" id="" class="rateMsg" placeholder="Describe your experience with this Applicant" cols="30" rows="10"></textarea>
+                                  <textarea name="user-message" id="" class="rateMsg" placeholder="Describe your experience with this Applicant" cols="30" rows="10"></textarea>
                               </div>
                               <div class="rate-rror" align="center"></div>
                               <div class="rpsb" align="center">
-                                  <button class="rpbtn">Post Review</button>
+                                  <button type="submit" class="rpbtn">Post Review</button>
                               </div>
-                          </div>
+                          </form>
+                          @endforeach
                       </div>
                   </div>
   

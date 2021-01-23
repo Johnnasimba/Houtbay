@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Applicants;
 use App\Client;
-use App\Recommendation;
+use App\Rates;
 use App\Extra;
 use App\User;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -162,14 +162,17 @@ public function post(Request $request) {
      return back()->with('success', 'Message sent successfully');
  }
 
- public function recommendation($id) {
-   $recommend= new Recommendation();
+ public function postRates($id) {
+   $rates= new Rates();
 
-       $recommend->name = request('name');
-       $recommend->recommendation = request('recommend');
-       $recommend->recommendation_id = $id;
-   $recommend->save();
+       $rates->applicant_id = $id;
+       $rates->userName= request('user-name');
+       $rates->userReview = request('user-review');
+       $rates->userMessage = request('user-message');
+       $rates->dateReviewed = request('date-reviewed');
+   $rates->save();
     return back()->with('success', 'Thank you for your recommendation');
 }
 
 }
+

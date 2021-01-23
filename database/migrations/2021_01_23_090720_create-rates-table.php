@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRecommendationsTable extends Migration
+class CreateRatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateRecommendationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('recommendations', function (Blueprint $table) {
+        Schema::create('rates', function (Blueprint $table) {
             $table->id();
+            $table->string('applicant_id');
+            $table->string('userName');
+            $table->string('userReview');
+            $table->string('userMessage');
+            $table->string('dateReviewed');
             $table->timestamps();
-            $table->string('name')->uniqid();
-            $table->string('recommendation');
-            $table->string('recommendation_id');
-        });
+         });
     }
 
     /**
@@ -29,6 +31,6 @@ class CreateRecommendationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recommendations');
+        Schema::dropIfExists('rates');
     }
 }
