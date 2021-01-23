@@ -172,7 +172,7 @@
 
                           <!-- Rating form -->
                           @foreach($Applicant as $item)
-                          <form method="POST" action="/details/13" class="rmp">
+                          <form method="POST" action="/details/{{$item->id}}" class="rmp">
                                 @csrf
                               <div class="rpc">
                                   <span>
