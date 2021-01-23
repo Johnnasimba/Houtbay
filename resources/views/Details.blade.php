@@ -277,11 +277,17 @@
                 <label class="left" >Your Mobile Number</label>
                 <input type="number" name="number"  placeholder="Enter mobile number" required>
               </div>
+              <!-- Date -->
+              <div class="form-group" style="display: none;">
+                  <label ></label>
+                  <input type="text" name="date"  value="<?php echo $date ?>"  >
+              </div>
               <!-- Message -->
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea name="message" id="" cols="30" rows="10" class="grey-text"
                  placeholder="What else would you like to know about {{ $item->firstName }}  {{ $item->lastName }}" ></textarea>
+                 
               </div>
               <!--Button -->
               <div>

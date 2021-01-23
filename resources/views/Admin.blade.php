@@ -1,6 +1,7 @@
 @extends('layouts.mainLayout')
 
 @section('body')
+  
 <div class="container" id="admin-page">
         <!-- Buttons -->
         <div class="buttons">
@@ -21,7 +22,7 @@
       @foreach($clients as $item)
       <section>
                 <div class="date">
-                    02 January, 2021
+                   {{$item->date}}
                 </div>
                 <div class="request-details">
                     <ul>

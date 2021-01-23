@@ -80,6 +80,7 @@ public function about() {
 public function Admin() { 
    $clientRequest = DB::table('clients')
    ->join('applicants', function($join){ $join->on('clients.contact_id', '=', 'applicants.id');})
+   ->orderBy('id', "desc")
    ->get();
    return view('Admin',  ['clients'=>$clientRequest]);  
 }
@@ -157,6 +158,7 @@ public function post(Request $request) {
      $client->email = request('email');
      $client->number = request('number');     
      $client->message = request('message');
+     $client->date = request('date');
      $client->contact_id = $id;
      $client->save();
      return back()->with('success', 'Message sent successfully');
