@@ -1,20 +1,14 @@
-.footer {
-  width: 100vw;
-  background-color:#0093E3 ;
-  height: 130px;
-  margin: 0px;
-}
+
 #footer {
-  position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: absolute;
-    height: 130px;
-    bottom: 0px;
-    width: 100vw;
-    background-color:#0093E3;
-    margin: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 130px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:#0093E3; 
     
   
 }

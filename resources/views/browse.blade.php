@@ -2,7 +2,8 @@
 @extends('layouts.mainLayout')
 
 @section('body')
-<div class="card-deck">
+<div class="container">
+    <div class="card-deck">
         @foreach($Applicants as $Applicant) 
 
         <a href="/{{ $Applicant->id}}">
@@ -67,8 +68,6 @@
         </a>
         @endforeach
     </div>
-    <style>
-      
-
-    </style>
+   </div>
+   
 @endsection

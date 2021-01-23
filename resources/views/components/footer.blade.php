@@ -1,5 +1,5 @@
 
-<nav id="footer">
+
    <!-- Main footer -->
    <div class="main-footer ">
       <a href="/">
@@ -25,4 +25,3 @@
       </div>
       <p style="color: white;">@2020</p>
    </div>
-</nav>
