@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css ">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/home.css" >
+    <link rel="stylesheet" type="text/css" href="/css/home.css" >
     <link rel="stylesheet" type="text/css" href="/css/categories.css" >
     <link rel="stylesheet" type="text/css" href="/css/card.css" >
     <link rel="stylesheet" type="text/css" href="/css/header.css" >
     <link rel="stylesheet" type="text/css" href="/css/footer.css" >
     <link rel="stylesheet" type="text/css" href="/css/applicant.css" >
     <link rel="stylesheet" type="text/css" href="/css/admin.css" >
-    <link rel="stylesheet" type="text/css" href="css/addApplicant.css" >
+    <link rel="stylesheet" type="text/css" href="/css/addApplicant.css" >
  
     <title>Hout Bay Job Seekers</title>
   </head>

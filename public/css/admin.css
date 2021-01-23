@@ -1,6 +1,7 @@
 #admin-page {
     margin-top: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 0;
+    padding-bottom: 200px;
 }
 .buttons .logout {
     display: flex;

@@ -6,12 +6,12 @@
         <div class="buttons">
             <div class="logout">
                 <button  class="btn btn-danger"> <a href="logout"></a> Logout</button>
-                <button class="btn btn-info" ><a href="#">Sign up new user Admin</a> </button>
+                <button class="btn btn-info" id="signup-user-admin"><a href="#">Sign up new user Admin</a> </button>
             </div>
             <ul>
                 <li  class="btn"><a href="/Admin/addApplicant">ADD NEW APPLICANT</a> </li>
-                <li class="btn"><a href="#">UPDATE APPLICANT</a></li>
-                <li class="btn"><a href="#">DELETE APPLICANT</a></li>
+                <li class="btn" id="update-applicant"><a href="#">UPDATE APPLICANT</a></li>
+                <li class="btn" id="delete-applicant"><a href="#">DELETE APPLICANT</a></li>
             </ul>
         </div>
 
@@ -51,6 +51,22 @@
         
         @endforeach   
     </div>
+    <script>
+        const newUser = document.getElementById("signup-user-admin");
+        const updateApplicant =  document.getElementById("update-applicant");
+        const deleteApplicant = document.getElementById("delete-applicant")
+
+
+        newUser.addEventListener("click", () => {
+            alert("Currently, You are not allowed to add new user admin.")
+        });
+        updateApplicant.addEventListener("click", ()=> {
+            alert("There is less number of applicants such that all updates are done manually for the moment.")
+        });
+        deleteApplicant.addEventListener("click", ()=> {
+            alert("The delete applicant functionality has been disabled for the moment.")
+        })
+    </script>
  </div>
 
  @endsection

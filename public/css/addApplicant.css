@@ -1,6 +1,7 @@
 #addApplicant-page {
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
     margin-top: 20px;
+    padding-bottom: 200px;
 }
 
 #addApplicant form {
