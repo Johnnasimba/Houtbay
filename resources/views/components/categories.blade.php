@@ -1,15 +1,15 @@
 <div class="categories">
-    <span class="links"><a href="#">Gardener</a></span>
-    <span class="links"><a href="#">House keeper</a></span>
-    <span class="links"><a href="#">Driver</a></span>
-    <span class="links"><a href="#">Plumber</a></span>
-    <span class="links"><a href="#">Painter</a></span>
-    <span class="links"><a href="#">Baby sitter</a></span>
-    <span class="links"><a href="#">Builder</a></span>
-    <span class="links"><a href="#">General cleaner</a></span>
-    <span class="links"><a href="#">Brick layer</a></span>
-    <span class="links"><a href="#">Waiter</a></span>
-    <span class="links"><a href="#">Carpenter</a></span>
-    <span class="links"><a href="#">Sales assistance</a></span>
-    <span class="links"><a href="#">Still fixer</a></span>      
+    <span class="links"><a href="/browse/gardener">Gardener</a></span>
+    <span class="links"><a href="/browse/house">House keeper</a></span>
+    <span class="links"><a href="/browse/driver">Driver</a></span>
+    <span class="links"><a href="/browse/plumber">Plumber</a></span>
+    <span class="links"><a href="/browse/painter">Painter</a></span>
+    <span class="links"><a href="/browse/baby">Baby sitter</a></span>
+    <span class="links"><a href="/browse/build">Builder</a></span>
+    <span class="links"><a href="/browse/genera;">General cleaner</a></span>
+    <span class="links"><a href="/browse/brick">Brick layer</a></span>
+    <span class="links"><a href="/browse/waiter">Waiter</a></span>
+    <span class="links"><a href="/browse/carpenter">Carpenter</a></span>
+    <span class="links"><a href="/browse/assistance">Sales assistance</a></span>
+    <span class="links"><a href="/browse/still">Still fixer</a></span>      
  </div>
