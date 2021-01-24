@@ -40,7 +40,7 @@ public function search(Request $request) {
      ->orWhere('forthJob', 'like', '%'.$search.'%') 
      ->paginate(15);     
     
-    return view ('Search' , ['Applicants' =>$Applicants,]);
+    return view ('Search' , ['Applicants' =>$Applicants, 'search'=> $search,]);
 }
 
 
@@ -80,7 +80,7 @@ public function about() {
 public function Admin() { 
    $clientRequest = DB::table('clients')
    ->join('applicants', function($join){ $join->on('clients.contact_id', '=', 'applicants.id');})
-   ->orderBy('id', "desc")
+   ->groupBy("created_at")
    ->get();
    return view('Admin',  ['clients'=>$clientRequest]);  
 }

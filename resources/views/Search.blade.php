@@ -2,6 +2,19 @@
  @section('body')
  
   <div class="container" id="Search-container">
+   <?php 
+
+   if(count($Applicants) <= 0) {
+     $firstString = "There is no results for ";
+     $secondString = "\"";
+     
+     echo "<h5 align=center>".{$firstString}. "<i>{$search}</i>" ."</h5>";
+   } else {
+     echo '<h5 align=center>Search results for "<i>{$search}</i>" </h5>';
+   }
+
+   ?>
+
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
 
@@ -67,6 +80,7 @@
         </a>
         @endforeach
     </div>
+    
   </div>
   <style>
   #Search-container {
