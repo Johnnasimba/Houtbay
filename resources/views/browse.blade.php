@@ -2,7 +2,14 @@
 @extends('layouts.mainLayout')
 
 @section('body')
-<div class="container">
+<div class="container" id="browse-page">
+  <?php 
+    if(count($Applicants) <= 0) {    
+          echo "<h5 align=center>There is no results for  \"<i>$jobType</i>\"</h5>";
+      } else {
+        echo "<h5 align=center>Search results for  \"<i>$jobType</i>\"</h5>";
+      }
+   ?>
     <div class="card-deck">
         @foreach($Applicants as $Applicant) 
 

@@ -28,7 +28,7 @@ class HoutbayController extends Controller
      ->orWhere('thirdJob', 'like', '%'.$jobType.'%') 
      ->orWhere('forthJob', 'like', '%'.$jobType.'%') 
      ->paginate(15);
-    return view( 'browse', ['Applicants' =>$Applicants,] );
+    return view( 'browse', ['Applicants' =>$Applicants, 'jobType'=> $jobType] );
  }
 
 public function search(Request $request) {
@@ -40,7 +40,7 @@ public function search(Request $request) {
      ->orWhere('forthJob', 'like', '%'.$search.'%') 
      ->paginate(15);     
     
-    return view ('Search' , ['Applicants' =>$Applicants, 'search'=> $search,]);
+    return view ('Search' , ['Applicants' =>$Applicants, 'search'=> $search]);
 }
 
 

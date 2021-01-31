@@ -4,13 +4,10 @@
   <div class="container" id="Search-container">
    <?php 
 
-   if(count($Applicants) <= 0) {
-     $firstString = "There is no results for ";
-     $secondString = "\"";
-     
-     echo "<h5 align=center>".{$firstString}. "<i>{$search}</i>" ."</h5>";
+   if(count($Applicants) <= 0) {    
+      echo "<h5 align=center>There is no results for  \"<i>$search</i>\"</h5>";
    } else {
-     echo '<h5 align=center>Search results for "<i>{$search}</i>" </h5>';
+    echo "<h5 align=center>Search results for  \"<i>$search</i>\"</h5>";
    }
 
    ?>

@@ -9,3 +9,6 @@ body {
     min-height: 100%;
     position: relative;
 }
+#browse-page {
+    margin-top: 20px;
+}
