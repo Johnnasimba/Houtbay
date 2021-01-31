@@ -26,29 +26,29 @@
                 <!-- Job titles -->
                 <ul class="card-title">
                   <li>
-                      <h5>Driver </h5>
+                  <h5>{{$Applicant->firstJob}} </h5>
                   </li>
                   <li>
-                      <h5>Gardener </h5>
+                      <h5>{{$Applicant->secondJob}} </h5>
                   </li>
                   <li>
-                      <h5>House keeper </h5>
+                      <h5>{{$Applicant->thirdJob}} </h5>
                   </li>
                   <li>
-                      <h5>Plumber </h5>
+                      <h5>{{$Applicant->forthJob}} </h5>
                   </li>
                 </ul>
                 <!-- Personal details (First and last name) -->
                 <div class="card-text full-name">
-                  <h6> <i>First name</i>  : <span>John</span> </h6>
+                  <h6> <i>Name</i>  : <span>{{$Applicant->firstName}}</span> </h6>
                 </div>
                 <!-- Available days -->
                 <div class="card-text available-days">
-                  <h6> <i>Available days</i>: <span> Thursday and Saturday</span></h6>
+                  <h6> <i>Available days</i>: <span> {{$Applicant->available_days}}</span></h6>
                 </div>
                 <!-- Location -->
                 <div class="card-text">
-                  <h6> <i>Location </i> : <span> Imizamo yethu, Houtbay</span></h6>
+                  <h6> <i>Location </i> : <span> {{$Applicant->location}}</span></h6>
                 </div>
             </div>
             <!-- Card footer || Rating -->

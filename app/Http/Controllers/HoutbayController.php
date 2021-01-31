@@ -16,7 +16,8 @@ class HoutbayController extends Controller
 {
  public function index() {
      $Applicants = DB::table('applicants')
-                  ->paginate(15);
+         ->join('extras', function($join){ $join->on('applicants.id', '=', 'extras.extra_id');})
+         ->paginate(15);
     return view( 'Home', ['Applicants' =>$Applicants,] );
  }
 
@@ -27,7 +28,9 @@ class HoutbayController extends Controller
      ->orWhere('secondJob', 'like', '%'.$jobType.'%') 
      ->orWhere('thirdJob', 'like', '%'.$jobType.'%') 
      ->orWhere('forthJob', 'like', '%'.$jobType.'%') 
+     ->join('extras', function($join){ $join->on('applicants.id', '=', 'extras.extra_id');})
      ->paginate(15);
+     
     return view( 'browse', ['Applicants' =>$Applicants, 'jobType'=> $jobType] );
  }
 
@@ -38,6 +41,7 @@ public function search(Request $request) {
      ->orWhere('secondJob', 'like', '%'.$search.'%') 
      ->orWhere('thirdJob', 'like', '%'.$search.'%') 
      ->orWhere('forthJob', 'like', '%'.$search.'%') 
+     ->join('extras', function($join){ $join->on('applicants.id', '=', 'extras.extra_id');})
      ->paginate(15);     
     
     return view ('Search' , ['Applicants' =>$Applicants, 'search'=> $search]);
