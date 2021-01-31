@@ -9,7 +9,7 @@
     --linear: #ef5350;
     --white: #fff;
     --r-color: #d63031;
-    --light-b: #686de0;
+    --light-b: #68a2e0;
 }
 * {
     padding: 0;
@@ -20,7 +20,7 @@
 #Applicant-page {
     margin-top: 40px;
     margin-bottom: 0;
-    padding-bottom: 200px;
+    padding: 10px 10px 200px 10px !important;
 }
 .applicant-details {
     background: #f9f9f9;
