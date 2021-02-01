@@ -2,6 +2,7 @@
 
 @section('body')
 <div class="container" id="login" align="center"> 
+  
     <h4 class="center">Login</h4>
 
     <form method="post" action="" class="center" >
@@ -23,6 +24,9 @@
     
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
+    <h4 align=center style="color: red; margin-top:20px;">Use the following login details</h4>
+    <p  align=center style="color: red;">Email: <strong>nasimba4john@gmail.com</strong></p>
+    <p  align=center style="color: red;">Password: <strong>John4Nasimba</strong></p>
 </div>
 <style>
     #login {
