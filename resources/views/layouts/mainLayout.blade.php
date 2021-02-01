@@ -61,23 +61,23 @@
         </div>
 
             <!-- Side Nav -->
-        <div class="preload">
+            <div class="preload">
             <nav class="nav"  id="side-nav">
                 <div class="nav__links">
-                <a href="#" class="nav__link">
-                    <i class="material-icons">home</i>
-                    Home
-                </a>
-                <a class="nav__link" href="#">
-                    <i class="material-icons">info</i>
-                    About
-                </a>
-                <a class="nav__link " href="#">
-                    <i class="material-icons">contact_page</i>
-                    Contact
-                </a>
-               
-                    <a class="nav__link" href="#">
+                    <a href="/" class="nav__link">
+                        <i class="material-icons">home</i>
+                        Home
+                    </a>
+                    <a class="nav__link" href="/about">
+                        <i class="material-icons">info</i>
+                        About
+                    </a>
+                    <a class="nav__link " href="#contact">
+                        <i class="material-icons">contact_page</i>
+                        Contact
+                    </a>
+                
+                    <a class="nav__link" href="/Admin">
                         <i class="material-icons">admin_panel_settings</i>
                     Admin
                     </a>
