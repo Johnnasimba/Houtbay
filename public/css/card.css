@@ -169,7 +169,8 @@
     font-family: "roboto", sans-serif;
 }
 
-@media only screen and (max-device-width: 400px) {
+
+@media  screen and (max-width: 400px) {
     .container {
         width: 100%;
         margin: 0px;
@@ -178,11 +179,13 @@
     .card-deck {
         padding: 0px;
         margin: 0px;
+        padding-bottom: 200px;
     }
     .card-deck .card {
         width: 90% !important;
         height: 500px;
         margin: 10px;
         padding: 5px;
+       
     }
 }
