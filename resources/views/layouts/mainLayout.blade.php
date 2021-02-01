@@ -21,55 +21,63 @@
 
   <body>
           <!-- Header -->
-    <div class="main-header">
-        <div class="container" id="header">
+          <div id="header" >
+          <!-- Desktop-header -->
+          <div class="container" >
 
-            <!-- Menu button -->
-            <div class="navbar navbar-white btn " id="menu-button">
-                <i class="material-icons">menu</i>
-            </div>
-
-            <!-- Title -->
-            <nav class="header-navbar navbar navbar-dark " id="header-title" >
-                <div class="header-title">
-                    <a class="navbar-brand" href="/">Hout Bay Job Seekers</a>
+              <!-- Menu button -->
+                <div class="navbar navbar-white btn " id="menu-button">
+                    <i class="material-icons">menu</i>
                 </div>
-            </nav>  
+        
+                <!-- Title -->
+                <nav class="header-navbar navbar navbar-dark  " id="header-title" >
+                    <div class="header-title">
+                        <a class="navbar-brand" href="/">Hout Bay Job Seekers</a>
+                    </div>
+                </nav>  
 
-            <!-- Search form -->
-            <div id="search-form" >
-                <form action="search" method="get" class="search-form"  >
-                   @csrf     
-                    <input type="search" placeholder="Search" name="search">
-                    <button  id="search-button" type="submit">Search</button>
-                </form>
-            </div>
-            
-            <!-- Search icon -->
-            <div class="navbar navbar-white btn " id="search-icon">
-                 <i class="material-icons">search</i>
+                <!-- Search form -->
+                <div class="search-form desktop " id="desktop-search-form" >
+                    <form action="search" method="get" class="search-form"  >
+                    @csrf  
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit"  class="search-button">Search</button>
+                    </form>
+                </div>
+                <div class="search-form mobile hidden " id="mobile-search-form" >
+                    <form action="search" method="get"  class="search-form"  >
+                    @csrf  
+                        <input type="search" name="search" placeholder="Search">
+                        <button type="submit"  class="search-button" id="mobile-search-button">Search</button>
+                    </form>
+                </div>
+                 <!-- Search icon -->
+                 <div class="navbar navbar-white btn  " id="search-icon" >
+                    <i class="material-icons">search</i>
 
-             </div>
-        </div> 
+                </div>
+            </div> 
+        </div>
 
-          <!-- Side Nav -->
+            <!-- Side Nav -->
         <div class="preload">
             <nav class="nav"  id="side-nav">
                 <div class="nav__links">
-                    <a href="/" class="nav__link">
-                        <i class="material-icons">home</i>
-                        Home
-                    </a>
-                    <a class="nav__link" href="/about">
-                        <i class="material-icons">info</i>
-                        About
-                    </a>
-                    <a class="nav__link " href="#contact">
-                        <i class="material-icons">contact_page</i>
-                        Contact
-                    </a>
-                
-                    <a class="nav__link" href="/Admin">
+                <a href="#" class="nav__link">
+                    <i class="material-icons">home</i>
+                    Home
+                </a>
+                <a class="nav__link" href="#">
+                    <i class="material-icons">info</i>
+                    About
+                </a>
+                <a class="nav__link " href="#">
+                    <i class="material-icons">contact_page</i>
+                    Contact
+                </a>
+               
+                    <a class="nav__link" href="#">
                         <i class="material-icons">admin_panel_settings</i>
                     Admin
                     </a>
@@ -77,8 +85,6 @@
                 <div class="nav__overlay"  id="nav__overlay"></div>
             </nav>
         </div>
-
-    </div>
 
         <!-- Content body -->
         <div  id="content" >

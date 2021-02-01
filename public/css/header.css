@@ -1,15 +1,16 @@
-.main-header {
-    height: 50px ;
-    width: 100%;
-    background-color:#0093E3 ;
-}   
-#header {
+#header{
+    width: 100vw;
+    height: 50px;
+    background-color: #0093E3;
+    margin: 0;
+    padding: 0;
+}
+#header .container {
     background-color:#0093E3 ;
     display: flex;
     justify-content: space-between;
     height: 50px;
 }
-
 #menu-button {
     background-color:#0093E3 ;
     color: white;
@@ -17,15 +18,12 @@
 #menu-button:hover {
     filter: brightness(80%);
 }
-#menu-button img {
-    color: white;
-    
-}
-#header-title{
+
+#header .header-navbar {
     margin-right: 0px;
     padding-right: 0px;
 }
-#header-title:hover {
+.header-title:hover {
     filter: brightness(80%);
 }
 
@@ -34,7 +32,7 @@
     display: flex;
     justify-content: flex-end;
     background-color:#0093E3 ;
-    width: 300px;
+    width: 200px;
     margin-right: 0px;
     height: 50px;
 }
@@ -48,7 +46,7 @@
     padding: 20px;
     font-size: 1.2em;
 }
-#search-button {
+#header .search-button {
    width: 100px;
    height: 40px;
    border: 1px solid white;
@@ -58,71 +56,73 @@
    margin: 5px 10px 7px 5px;
 
 }
- #search-button:hover {
+ .search-button:hover {
     filter: brightness(80%);
  }
  #search-icon {
-    background-color: #0093E3;
-    margin: 5px 10px 7px 0px;
-    padding-left: 0px;
-    color: white;
+     color: #fff;
  }
-#search-icon:hover {
-    filter: brightness(80%);
-}
+ #header .mobile {
+     display: none;
+ }
 
 
+/* Media queries */
 
-/* Display search icon only on small screens */
-@media only screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
     #search-icon {
         display: none;
     }
+   
+}
+@media screen and (max-width: 800px) {
+  #header .desktop{
+      display: none;
+  }
+  #header .mobile {
+    display: flex;
 }
 
-/* Hide  search form on small screens. It will only be displayed on click on Search-icon */
-@media only screen and (max-width: 500px) {
-    #search-form {
-        display: none;
-    } 
+  #header .container {
+    width: 100vw !important;
+    margin: 0;
+    padding: 0;
+  }
+   
+  #header .mobile {
+    display: flex;    
+  }
+
 }
- @media only screen and (max-width: 350px) {
-    #header-title {
-        margin: 5px 0px 10px 0px;
-        padding: 0px;
-    } 
-    #menu-button {
-        padding-left: 0px;
+
+
+@media screen and (max-width: 550px) {
+    #header .container {
+        display: flex;
+        justify-content: space-between;
+
     }
-}
- @media only screen and (max-width: 750px) {
-    #header-title {
-        margin: 5px 0px 10px 0px;
-        padding: 0px;
-    } 
+        
     #menu-button {
-        padding: 0px;
+        padding: 5px;
     }
+    #header .header-navbar {
+        display: inline-block;
+        margin-right: 10px;
+    }    
+
 }
 
 
-
+#header .hidden {
+    display: none;
+}
 
 /* Side Nav  */
 #preload * {
     transition: none !important;
     
 }
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333333;
-    display: flex;
-}
-
 .header__button {
     flex-shrink: 0;
     background: none;
@@ -186,4 +186,3 @@
     visibility: visible;
     opacity: 1;
 }
-
