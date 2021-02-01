@@ -11,6 +11,7 @@
      
     ?> -->
     <div class="card-deck">
+    <script>alert("This website is under development such that some functionalities may not work. However, feel free to browse around")</script>
         @foreach($Applicants as $Applicant) 
 
         <a href="/{{ $Applicant->id}}">
